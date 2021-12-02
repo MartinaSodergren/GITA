@@ -1,0 +1,16 @@
+{
+  "keywordFileContentHash": "0C2A07FD76DC53F546C70664F6B5258B",
+  "keywordClasses": [
+    {
+      "name": "programmingBasicsJava.Basics",
+      "keywordMethods": [
+        {
+          "name": "Strings",
+          "parameters": [],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

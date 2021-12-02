@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>XPATH - Övning</title>
+        <style>
+            #middleVertically {
+                display: flex;
+                justify-content: center;
+            }
+            #middleHorizontally {
+                display: flex;
+                align-items: center;
+            }
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                transition: 0.3s;
+                width: 40%;
+            }
+            .card:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+        </style>
+    </head>
+    <body>
+        <div style="width: 100%; height: 100%; background-color: aquamarine; position: fixed;">
+            <div>
+                <div> 
+                    <div id="middleVertically">
+                        <button >Text eq <input type="date" name="test" id="test"></button>
+                        <input type="text" value="Skriv in text :)">
+                    </div>
+                    <div class="card">
+                        <div class="container">
+                            <div style="width: 30%; height: 100%; background-color: burlywood; position: fixed;">
+                                <table>
+                                    <tr>
+                                        <th>Namn</th>
+                                        <th>lösenord</th>
+                                    </tr>
+                                    <tr>
+                                        <th><input type="text" name="t" id="t"></th>
+                                        <th><input type="password" name="t" id="t"></th>
+                                    </tr>
+                                    <tr>
+                                        <th><button>TestKnapp</button></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Test 1<input type="checkbox" id=""></th>
+                                        <th>Test 2<input type="checkbox" id=""></th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <select name="" id="">
+                                                <option>test1</option>
+                                                <option>test2</option>
+                                                <option>test3</option>
+                                            </select>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
