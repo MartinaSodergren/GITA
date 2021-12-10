@@ -3,71 +3,99 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>XPATH - Övning</title>
-        <style>
-            #middleVertically {
-                display: flex;
-                justify-content: center;
-            }
-            #middleHorizontally {
-                display: flex;
-                align-items: center;
-            }
-            .container {
-                padding: 2px 16px;
-            }
-            .card {
-                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-                transition: 0.3s;
-                width: 40%;
-            }
-            .card:hover {
-                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-            }
-        </style>
+        <link rel="stylesheet" href="xpathDemoSida.css">
     </head>
+    <script>
+        
+        function generateRandomText(){
+            let result = ' ';            
+            let characters = document.getElementById("fname").value + document.getElementById("lname").value;
+            const charactersLength = characters.length;
+            for ( let i = 0; i < characters.length; i++ ) {
+                result += characters[Math.floor(Math.random() * characters.length)];
+                
+            }
+            console.log(result);
+            document.getElementById("test").innerHTML = result;
+        }
+    </script>
     <body>
-        <div style="width: 100%; height: 100%; background-color: aquamarine; position: fixed;">
-            <div>
-                <div> 
-                    <div id="middleVertically">
-                        <button >Text eq <input type="date" name="test" id="test"></button>
-                        <input type="text" value="Skriv in text :)">
-                    </div>
-                    <div class="card">
-                        <div class="container">
-                            <div style="width: 30%; height: 100%; background-color: burlywood; position: fixed;">
-                                <table>
-                                    <tr>
-                                        <th>Namn</th>
-                                        <th>lösenord</th>
-                                    </tr>
-                                    <tr>
-                                        <th><input type="text" name="t" id="t"></th>
-                                        <th><input type="password" name="t" id="t"></th>
-                                    </tr>
-                                    <tr>
-                                        <th><button>TestKnapp</button></th>
-                                    </tr>
-                                    <tr>
-                                        <th>Test 1<input type="checkbox" id=""></th>
-                                        <th>Test 2<input type="checkbox" id=""></th>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <select name="" id="">
-                                                <option>test1</option>
-                                                <option>test2</option>
-                                                <option>test3</option>
-                                            </select>
-                                        </th>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="navbar">
+            <div class="navbar-logo"><i>Xpath demo</i></div>
+            
+        </div>
+        <div class="root">
+            <div class="content">
+                <table>
+                    <tr>
+                        <th>Text</th>
+                        <th>Function</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="fname">Firstname:</label>
+                        </td>
+                        <td>
+                            <input id="fname" type="text" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="fname">Lastname:</label>
+                        </td>
+                        <td>
+                            <input id="lname" type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="fname">Date:</label>
+                        </td>
+                        <td>
+                            <input type="date" name="" id="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="fname">Checkbuttons:</label>
+                        </td>
+                        <td>
+                            Attribute<input type="checkbox" name="" id="">
+                            Attribute<input type="checkbox" name="" id="">
+                            Attribute<input type="checkbox" name="" id="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="fname">Dropdown:</label>
+                        </td>
+                        <td>
+                            <select name="" id="">
+                                <option value="Select">Select Option</option>
+                                <option value="Option 1">Option 1</option>
+                                <option value="Option 2">Option 2</option>
+                                <option value="Option 3">Option 3</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="fname">Submit:</label>
+                        </td>
+                        <td>
+                            <input type="submit" name="" id="" onclick="generateRandomText()">
+                        </td>
+                    </tr>
+                </table>
+
+                
+                
+
+            </div>
+            <div id="output">
+                    test
+                    <p id="test"></p>
             </div>
         </div>
-
     </body>
 </html>
