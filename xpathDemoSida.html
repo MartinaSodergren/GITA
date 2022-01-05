@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>XPATH - Övning</title>
+        <link rel="stylesheet" href="xpathDemoSida.css">
+    </head>
+    <script>
+        
+        function generateRandomText(){
+            let result = ' ';            
+            let characters = document.getElementById("fname").value + document.getElementById("lname").value;
+            let date = new Date(document.getElementById("date").value).getTime();
+            characters += date;
+            console.log(date);
+            const charactersLength = characters.length;
+            for ( let i = 0; i < characters.length; i++ ) {
+                result += characters[Math.floor(Math.random() * characters.length)];
+                
+            }
+            console.log(result);
+            document.getElementById("test").innerHTML = result;
+        }
+    </script>
+    <body>
+        <div class="navbar">
+            <div class="navbar-logo"><i>Xpath demo</i></div>
+            
+        </div>
+        <div class="root">
+            <div class="content">
+                <table>
+                    <tr>
+                        <th>Text</th>
+                        <th>Function</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="fname">Firstname:</label>
+                        </td>
+                        <td>
+                            <input id="fname" type="text" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="fname">Lastname:</label>
+                        </td>
+                        <td>
+                            <input id="lname" type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="fname">Date:</label>
+                        </td>
+                        <td>
+                            <input type="date" name="" id="date">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="fname">Checkbuttons:</label>
+                        </td>
+                        <td>
+                            Attribute<input type="checkbox" name="" id="Red">
+                            Attribute<input type="checkbox" name="" id="Green">
+                            Attribute<input type="checkbox" name="" id="Blue">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="fname">Dropdown:</label>
+                        </td>
+                        <td>
+                            <select name="" id="">
+                                <option value="Select">Select Option</option>
+                                <option value="Option 1">Option 1</option>
+                                <option value="Option 2">Option 2</option>
+                                <option value="Option 3">Option 3</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="fname">Submit:</label>
+                        </td>
+                        <td>
+                            <input type="submit" name="" id="" onclick="generateRandomText()">
+                        </td>
+                    </tr>
+                </table>
+
+                
+                
+
+            </div>
+            <div id="output">
+                    <p id="test"></p>
+            </div>
+            <div id="output">
+                <p id="test"></p>
+            </div>
+        </div>
+    </body>
+</html>
