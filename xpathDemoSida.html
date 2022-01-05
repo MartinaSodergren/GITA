@@ -10,6 +10,9 @@
         function generateRandomText(){
             let result = ' ';            
             let characters = document.getElementById("fname").value + document.getElementById("lname").value;
+            let date = new Date(document.getElementById("date").value).getTime();
+            characters += date;
+            console.log(date);
             const charactersLength = characters.length;
             for ( let i = 0; i < characters.length; i++ ) {
                 result += characters[Math.floor(Math.random() * characters.length)];
@@ -52,7 +55,7 @@
                             <label for="fname">Date:</label>
                         </td>
                         <td>
-                            <input type="date" name="" id="">
+                            <input type="date" name="" id="date">
                         </td>
                     </tr>
                     <tr>
@@ -60,9 +63,9 @@
                             <label for="fname">Checkbuttons:</label>
                         </td>
                         <td>
-                            Attribute<input type="checkbox" name="" id="">
-                            Attribute<input type="checkbox" name="" id="">
-                            Attribute<input type="checkbox" name="" id="">
+                            Attribute<input type="checkbox" name="" id="Red">
+                            Attribute<input type="checkbox" name="" id="Green">
+                            Attribute<input type="checkbox" name="" id="Blue">
                         </td>
                     </tr>
                     <tr>
@@ -93,8 +96,10 @@
 
             </div>
             <div id="output">
-                    test
                     <p id="test"></p>
+            </div>
+            <div id="output">
+                <p id="test"></p>
             </div>
         </div>
     </body>

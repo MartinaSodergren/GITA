@@ -8,6 +8,10 @@ html, body {
     flex-direction: row;
 }
 
+.xpath-generator {
+    display: flex;
+}
+
 .navbar {
     display: flex;
     width: 100%;
