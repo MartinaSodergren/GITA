@@ -32,7 +32,9 @@ För att verifiera att du har rätt version kan du öppna upp CMD/Powershell via
 
 
 ## Installera Git <a name="git"></a>
-Kapitlet är inte klart ännu.
+Följ denna länk: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+Sök efter "Windows".
+Du bör ha hittat nedladdningslänken. 
 
 ## Ladda ner Katalon Studio <a name="katalon"></a>
 
